@@ -1,3 +1,7 @@
+using Mentorship.Application;
+using Mentorship.Core;
+using Mentorship.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +10,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCoreService()
+    .AddApplicationService(builder.Configuration)
+    .AddInfrastructureService();
 
 var app = builder.Build();
 

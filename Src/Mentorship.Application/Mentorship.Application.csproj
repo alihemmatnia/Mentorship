@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Mentorship.Contracts\Mentorship.Contracts.csproj" />
+    <ProjectReference Include="..\Mentorship.Core\Mentorship.Domain.csproj" />
+    <ProjectReference Include="..\Mentorship.Infrastructure\Mentorship.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
